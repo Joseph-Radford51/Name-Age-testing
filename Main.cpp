@@ -5,15 +5,16 @@ using namespace std;
 int age;
 int option;
 
-int menu()
+
+int numgen()
 {
-	cout << "Menu Test success!" << endl;
+	cout << "Test success finally";
 	return 0;
 }
 
-int numgen() //this function doesn't work
+int menu()
 {
-	cout << "RNG Test success!" << endl;
+	cout << "Menu Test success!" << endl;
 	return 0;
 }
 
@@ -32,17 +33,16 @@ int agemod()
 	{
 		cout << menu();
 	}
-	else if(option == 2) // this is connected to function that isn't working
-	{
-		cout << numgen;
-	}
 	else if (option == 3)
 	{
 		endit();
 	}
+	else if (option == 2) //this works now
+	{
+		cout << numgen();
+	}
 	return 0;
 }
-
 
 
 int main()
@@ -54,7 +54,7 @@ int main()
 	cin >> name;
 	cin >> age;
 	cout << "Hi " << name << "! you will turn " << age +1 << "next year! " << endl;
-	cout << "would you like to go to main menu (1), go to an age modifier (2), restart this function (3), or end program? (4)" << endl;
+	cout << "would you like to go to main menu (1), go to an age modifier (2), restart this function (3), or go to a number generator? (4)" << endl;
 	cin >> option;
 	if (option == 1)
 	{
@@ -68,7 +68,7 @@ int main()
 	{
 		cout << main();
 	}
-	else if (option == 4) //this works
+	else if (option == 4) 
 	{
 		numgen();
 	}
